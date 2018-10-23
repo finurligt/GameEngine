@@ -16,22 +16,23 @@ public class GameObjectImplementation implements GameObject {
 
             Image img = null;
             try {
-                ImageIO.read(new File("res/field.gif"));
+                img =ImageIO.read(new File("res/field.gif"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
             drawField =false;
+            //g.drawImage(img,0,0,null);
             g.drawRect(10,10,100,100);
 
         } else {
             Image img = null;
             try {
-                ImageIO.read(new File("res/logo.gif"));
+                img = ImageIO.read(new File("res/logo.gif"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
             drawField =true;
-            g.drawRect(100,100,100,100);
+            g.drawImage(img,0,0,null);
         }
         return;
 
