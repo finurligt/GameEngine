@@ -23,7 +23,10 @@ public class Window extends Canvas implements Runnable, KeyListener {
 
 
     @Override
-    public void keyTyped(KeyEvent e) {
+    public void keyTyped(KeyEvent key) {
+        synchronized (this) {
+            game.keyTyped(key);
+        }
 
     }
 
