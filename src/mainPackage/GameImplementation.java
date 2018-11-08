@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.LinkedList;
 
-class GameImplementation implements Game {
+class GameImplementation extends Game {
     GameObjectImplementation g;
     GameImplementation() {
         g = new GameObjectImplementation();
